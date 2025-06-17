@@ -1,0 +1,15 @@
+{"time":"2025-06-16T22:06:44.280057+03:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Users/user/Documents/MLOps/week-4/sagemaker/wandb/run-20250616_220643-mzlax8hg/logs/debug-core.log"}
+{"time":"2025-06-16T22:06:44.810938+03:00","level":"INFO","msg":"stream: created new stream","id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:44.810981+03:00","level":"INFO","msg":"stream: started","id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:44.81101+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:44.811141+03:00","level":"INFO","msg":"handler: started","stream_id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:44.811158+03:00","level":"INFO","msg":"sender: started","stream_id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:45.146849+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-16T22:06:46.479009+03:00","level":"INFO","msg":"stream: closing","id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:46.479108+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-16T22:06:46.47915+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-16T22:06:47.145416+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-16T22:06:47.431789+03:00","level":"INFO","msg":"handler: closed","stream_id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:47.431908+03:00","level":"INFO","msg":"sender: closed","stream_id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:47.431902+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"mzlax8hg"}
+{"time":"2025-06-16T22:06:47.432287+03:00","level":"INFO","msg":"stream: closed","id":"mzlax8hg"}

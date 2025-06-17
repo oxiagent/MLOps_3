@@ -1,0 +1,8 @@
+{"time":"2025-06-16T22:17:50.463142+03:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Users/user/Documents/MLOps/week-4/sagemaker/wandb/run-20250616_221750-cs641t70/logs/debug-core.log"}
+{"time":"2025-06-16T22:17:50.776765+03:00","level":"INFO","msg":"stream: created new stream","id":"cs641t70"}
+{"time":"2025-06-16T22:17:50.776809+03:00","level":"INFO","msg":"stream: started","id":"cs641t70"}
+{"time":"2025-06-16T22:17:50.776883+03:00","level":"INFO","msg":"handler: started","stream_id":"cs641t70"}
+{"time":"2025-06-16T22:17:50.776945+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"cs641t70"}
+{"time":"2025-06-16T22:17:50.776948+03:00","level":"INFO","msg":"sender: started","stream_id":"cs641t70"}
+{"time":"2025-06-16T22:17:51.016478+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-16T22:17:52.308372+03:00","level":"WARN","msg":"sender: sendUseArtifact: job builder disabled, skipping"}

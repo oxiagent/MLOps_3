@@ -1,0 +1,17 @@
+Downloading model artifact: s-oksana-set-university/linear-regression-pytorch/linear_regression_model:v0
+[34m[1mwandb[0m:   1 of 1 files downloaded.
+Model downloaded to: /Users/user/Documents/MLOps/week-4/sagemaker/artifacts/linear_regression_model:v0
+Found model at: /Users/user/Documents/MLOps/week-4/sagemaker/artifacts/linear_regression_model:v0/linear_regression_model.pth
+Loading model from: /Users/user/Documents/MLOps/week-4/sagemaker/artifacts/linear_regression_model:v0/linear_regression_model.pth
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify','pose' or 'obb'.
+Model loaded successfully
+Starting FastAPI server on http://0.0.0.0:8000
+SageMaker-compatible endpoint: http://0.0.0.0:8000/invocations
+View documentation at http://0.0.0.0:8000/docs
+Press Ctrl+C to stop the server
+[32mINFO[0m:     Started server process [[36m84858[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     127.0.0.1:55688 - "[1mGET /docs HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55688 - "[1mGET /openapi.json HTTP/1.1[0m" [32m200 OK[0m

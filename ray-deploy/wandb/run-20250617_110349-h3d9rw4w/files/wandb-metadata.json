@@ -1,0 +1,44 @@
+{
+  "os":  "macOS-15.0.1-arm64-arm-64bit",
+  "python":  "CPython 3.10.11",
+  "startedAt":  "2025-06-17T08:03:50.233612Z",
+  "program":  "/Users/user/Documents/MLOps/week-4/ray-deploy/test_yolo_local.py",
+  "codePath":  "week-4/ray-deploy/test_yolo_local.py",
+  "git":  {
+    "remote":  "git@github.com:oxiagent/MLOps_HW_2.git",
+    "commit":  "dedb8385fe4483e3e8c8ffd51716923b7aab4c98"
+  },
+  "email":  "s.oksana@setuniversity.edu.ua",
+  "root":  "/Users/user/Documents/MLOps/week-4/ray-deploy",
+  "host":  "Users-MacBook-Pro.local",
+  "executable":  "/Users/user/Documents/MLOps/week-4/sagemaker/.venv/bin/python",
+  "codePathLocal":  "test_yolo_local.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "206590521344"
+    },
+    "/System/Volumes/Data":  {
+      "total":  "494384795648",
+      "used":  "206590521344"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Apple M1",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  8,
+    "memoryGb":  16,
+    "swapTotalBytes":  "12884901888",
+    "ramTotalBytes":  "17179869184"
+  }
+}

@@ -1,0 +1,2 @@
+Downloading model artifact: dmytro-spodarets/model-registry/cicd-workshop-yolov8:v2
+Error downloading model: project 'model-registry' not found under entity 'dmytro-spodarets'

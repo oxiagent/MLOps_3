@@ -1,0 +1,12 @@
+boto3
+wandb
+python-dotenv
+pyyaml
+requests
+ultralytics
+torch
+pillow
+numpy
+opencv-python
+fastapi
+uvicorn 

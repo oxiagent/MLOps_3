@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Script for running the FastAPI service in a SageMaker container
+# This is the entry point for the SageMaker container
+
+# Setting environment variables if they weren't set before
+PORT=${PORT:-8080}
+WORKERS=${WORKERS:-1}
+TIMEOUT=${TIMEOUT:-120}
+LOG_LEVEL=${LOG_LEVEL:-info}
+
+# Creating directories for logs
+LOG_DIR=/opt/ml/output/data
+mkdir -p $LOG_DIR
+
+# Output diagnostic information
+echo "=== SageMaker Inference Container Start ==="
+echo "Current working directory: $(pwd)"
+echo "Server port: $PORT"
+echo "Workers: $WORKERS"
+echo "Log level: $LOG_LEVEL"
+echo "Timeout: $TIMEOUT"
+echo "Python version: $(python --version)"
+echo "System info:"
+echo "- CPU: $(grep 'model name' /proc/cpuinfo | head -1 | cut -d':' -f2 | xargs)"
+echo "- Memory: $(grep MemTotal /proc/meminfo | awk '{print $2/1024/1024 " GB"}')"
+echo "- Disk: $(df -h / | awk 'NR==2 {print $2}')"
+echo "=========================================="
+
+# Check for app.py file
+if [ -f app.py ]; then
+    echo "Found app.py"
+else
+    echo "Error: app.py not found in $(pwd)"
+    exit 1
+fi
+
+# Check for model presence
+if [ -d /opt/ml/model ]; then
+    MODEL_FILES=$(find /opt/ml/model -type f | wc -l)
+    MODEL_SIZE=$(du -sh /opt/ml/model | cut -f1)
+    echo "Model directory found: /opt/ml/model"
+    echo "Model files: $MODEL_FILES, Size: $MODEL_SIZE"
+else
+    echo "Warning: Model directory not found. Will use default model if configured."
+fi
+
+# Start resource monitoring in background
+echo "Starting resource monitoring..."
+export MONITOR_BACKGROUND=true
+python monitor.py &
+MONITOR_PID=$!
+echo "Resource monitor started with PID: $MONITOR_PID"
+
+# Function for cleanup on exit
+cleanup() {
+    echo "Shutting down server..."
+    if [ ! -z "$MONITOR_PID" ]; then
+        echo "Terminating monitor process: $MONITOR_PID"
+        kill -TERM $MONITOR_PID 2>/dev/null || true
+    fi
+    pkill -P $$ || true  # Kill child processes
+    exit 0
+}
+
+# Register signal handlers
+trap cleanup SIGTERM SIGINT
+
+# Start uvicorn server
+echo "Starting FastAPI server with uvicorn..."
+if [ "$SAGEMAKER_CONTAINER" = "1" ] || [ "$SAGEMAKER_CONTAINER" = "true" ]; then
+    # SageMaker mode
+    echo "Running in SageMaker mode"
+    exec uvicorn app:app --host 0.0.0.0 --port $PORT --workers $WORKERS --timeout-keep-alive $TIMEOUT --log-level $LOG_LEVEL
+else
+    # Local development mode with more verbose output
+    echo "Running in local development mode"
+    uvicorn app:app --host 0.0.0.0 --port $PORT --reload --log-level debug
+fi 

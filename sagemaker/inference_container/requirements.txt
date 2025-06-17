@@ -1,0 +1,26 @@
+# Core ML packages - CPU only versions
+ultralytics
+torch --extra-index-url https://download.pytorch.org/whl/cpu 
+torchvision --extra-index-url https://download.pytorch.org/whl/cpu
+
+# Minimal requirements
+numpy
+Pillow
+
+# Image processing - minimal headless version
+opencv-python-headless
+
+# Minimal API stack
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+
+# Additional utilities
+pandas
+matplotlib
+python-dotenv
+boto3
+
+# Monitoring
+psutil

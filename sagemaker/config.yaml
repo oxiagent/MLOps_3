@@ -1,0 +1,31 @@
+aws:
+  region: us-east-2
+  s3_bucket: cicd-workshop-sagemaker-dmytro
+  sagemaker_role_arn: arn:aws:iam::493395458839:role/SageMakerNewRole2
+
+container:
+  custom_image: 493395458839.dkr.ecr.us-east-2.amazonaws.com/yolov8-sagemaker:latest
+  dockerfile_dir: inference_container
+  framework: pytorch
+  framework_version: 2.5.1
+  python_version: py311
+  use_gpu: true
+  default_image_name: sagemaker-model
+
+model:
+  artifact_path: dmytro-spodarets/model-registry/cicd-workshop-yolov8
+  local_dir: models
+  local_file: model.pt
+  name: yolov8-model-new
+  version: v2
+
+wandb:
+  project: cicd-workshop
+  job_type: inference
+
+serverless:
+  name: "yolov8-serverless-endpoint"
+  config_name: "yolov8-serverless-endpoint-config"
+  max_concurrency: 5
+  memory_size: 2048
+

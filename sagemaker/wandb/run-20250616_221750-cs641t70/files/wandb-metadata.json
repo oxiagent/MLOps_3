@@ -1,0 +1,44 @@
+{
+  "os":  "macOS-15.0.1-arm64-arm-64bit",
+  "python":  "CPython 3.10.11",
+  "startedAt":  "2025-06-16T19:17:50.457920Z",
+  "program":  "/Users/user/Documents/MLOps/week-4/sagemaker/run_local_server.py",
+  "codePath":  "week-4/sagemaker/run_local_server.py",
+  "git":  {
+    "remote":  "git@github.com:oxiagent/MLOps_HW_2.git",
+    "commit":  "dedb8385fe4483e3e8c8ffd51716923b7aab4c98"
+  },
+  "email":  "s.oksana@setuniversity.edu.ua",
+  "root":  "/Users/user/Documents/MLOps/week-4/sagemaker",
+  "host":  "Users-MacBook-Pro.local",
+  "executable":  "/Users/user/Documents/MLOps/week-4/sagemaker/.venv/bin/python",
+  "codePathLocal":  "run_local_server.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "208265101312"
+    },
+    "/System/Volumes/Data":  {
+      "total":  "494384795648",
+      "used":  "208265101312"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "apple":  {
+    "name":  "Apple M1",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  8,
+    "memoryGb":  16,
+    "swapTotalBytes":  "18253611008",
+    "ramTotalBytes":  "17179869184"
+  }
+}

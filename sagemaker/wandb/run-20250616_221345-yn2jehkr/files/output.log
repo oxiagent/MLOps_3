@@ -1,0 +1,2 @@
+Downloading model artifact: s-oksana-set-university/linear-regression-pytorch/linear_regression_model:v2
+Error downloading model: artifact 'linear_regression_model:v2' not found in 's-oksana-set-university/linear-regression-pytorch'

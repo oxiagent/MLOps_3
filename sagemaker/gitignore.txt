@@ -1,0 +1,30 @@
+# Temporary files
+model.tar.gz
+wandb/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+artifacts/
+sagemaker_model/
+
+# Logs
+*.log
+logs/
+
+# Configuration files containing secrets
+.env
+
+# Test images
+*.jpg
+*.png
+*.jpeg 
+
+# Model files
+*.pt
+*.pth
+*.pth.tar
+*.pth.tar.gz
+*.pth.tar.gz.tar
+*.pth.tar.gz.tar.gz

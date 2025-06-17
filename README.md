@@ -23,7 +23,8 @@
 - entity: `s-oksana-set-university`
 - збережено артефакт: `linear_regression_model:v0`
 
-Тестування моделі відбувалось за допомогою команди:
+**Тестування моделі відбувалось за допомогою команди:**
+
 curl -X POST http://127.0.0.1:8000/predict \
      -H "Content-Type: application/json" \
      -d '{"features": [1.5]}'
